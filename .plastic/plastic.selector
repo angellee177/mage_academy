@@ -1,0 +1,4 @@
+repository "mage_academy/mage_academy@18968353833315@cloud"
+  path "/"
+    br "/main"
+    co "/main"
