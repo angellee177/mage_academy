@@ -2,17 +2,14 @@ using UnityEngine;
 
 public class PathFinding : MonoBehaviour
 {
-    EnemySpawnerHandler enemySpawner;
     WaveConfigSO waveConfig;
     Transform[] waypoints;
 
     int waypointIndex = 0;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void SetWaveConfig(WaveConfigSO config)
     {
-        enemySpawner = FindFirstObjectByType<EnemySpawnerHandler>();
-        waveConfig = enemySpawner.GetCurrentWave();
+        this.waveConfig = config;
         waypoints = waveConfig.GetWayPoints();
         transform.position = waveConfig.GetStartingWayPoint().position;
     }
@@ -20,7 +17,10 @@ public class PathFinding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FollowPath();
+        if(waveConfig != null)
+        {
+            FollowPath();
+        }
     }
 
     void FollowPath()
