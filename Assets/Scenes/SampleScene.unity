@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -289,6 +290,20 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041670dbc60d043c0982b256e2088b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShakeScreen
+  shakeDuration: 0.5
+  shakeMagnitude: 0.5
 --- !u!1 &987048445
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +540,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f4c5a079abe247b4a7f55cb5088bc0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerHandler
-  currentWave: {fileID: 11400000, guid: 10cb450e0c9a343b5ad5fab83b05b273, type: 2}
+  waveConfigs: []
+  timeBetweenWaves: 1
+  isLooping: 0
 --- !u!4 &1713164239
 Transform:
   m_ObjectHideFlags: 0
