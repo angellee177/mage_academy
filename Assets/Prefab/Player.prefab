@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4256713187721104516}
-  m_Layer: 0
+  - component: {fileID: 5317165259807975304}
+  - component: {fileID: 7900325111044440170}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,6 +34,122 @@ Transform:
   - {fileID: 75775053242170315}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &5317165259807975304
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936628021391398819}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &7900325111044440170
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936628021391398819}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.1931142, y: 0.16277862}
+      - {x: 1.5915295, y: 0.49149585}
+      - {x: 1.5863454, y: 0.80405974}
+      - {x: 1.3215176, y: 0.73716307}
+      - {x: 1.4763473, y: 1.3173416}
+      - {x: 1.4333987, y: 1.4905801}
+      - {x: 0.95090073, y: 0.8157835}
+      - {x: 0.8071426, y: 0.899565}
+      - {x: 0.866543, y: 1.1299994}
+      - {x: 1.1151599, y: 1.5500898}
+      - {x: 0.734373, y: 1.7950436}
+      - {x: 0.46502444, y: 1.892608}
+      - {x: 0.13996136, y: 1.9451709}
+      - {x: -0.20466787, y: 1.877148}
+      - {x: -0.19026728, y: 1.6864763}
+      - {x: 0.09848076, y: 1.5472765}
+      - {x: 0.07702395, y: 1.3721585}
+      - {x: -0.21802412, y: 1.1736207}
+      - {x: -0.2845183, y: 0.83392024}
+      - {x: -0.29900092, y: 0.6161666}
+      - {x: -0.9730023, y: 0.6214001}
+      - {x: -1.0749992, y: 0.2661953}
+      - {x: -1.0972478, y: 0.089730054}
+      - {x: -0.80102366, y: -0.0571661}
+      - {x: -0.47047043, y: -0.30945992}
+      - {x: -0.24492222, y: -0.4879489}
+      - {x: -0.5877852, y: -0.80901706}
+      - {x: -0.90333825, y: -0.88552856}
+      - {x: -1.1655704, y: -0.7313695}
+      - {x: -1.1684088, y: -0.9992342}
+      - {x: -1.3988327, y: -0.92181396}
+      - {x: -1.6183552, y: -1.2653351}
+      - {x: -1.6157801, y: -1.6814094}
+      - {x: -1.2381791, y: -1.923686}
+      - {x: -0.7324941, y: -1.9964256}
+      - {x: -0.17014976, y: -1.6842694}
+      - {x: 0.13487974, y: -1.042366}
+      - {x: 0.5585471, y: -0.42891955}
+      - {x: 0.6790916, y: -0.6331754}
+      - {x: 1.0419693, y: -0.71880436}
+      - {x: 0.8855889, y: -0.4557867}
+      - {x: 1.0972477, y: 0.002015531}
+  m_UseDelaunayMesh: 1
 --- !u!1 &4641461180620302587
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 75775053242170315}
   - component: {fileID: 7309559775373729030}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: mage_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

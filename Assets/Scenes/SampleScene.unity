@@ -401,8 +401,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHandler
   moveSpeed: 10
-  leftBoundPadding: 1
-  rightBoundPadding: 1
+  leftBoundPadding: 2
+  rightBoundPadding: 2
   upBoundPadding: 8
   downBoundPadding: 2
 --- !u!1 &1416722157
@@ -493,7 +493,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7443756053782179069, guid: faa7b958e73e44f419200f16c10ca35b, type: 3}
+  m_Sprite: {fileID: 5984858716648502874, guid: ceebe2773266c406290ca6c9c8f7f21e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -540,7 +540,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f4c5a079abe247b4a7f55cb5088bc0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnerHandler
-  waveConfigs: []
+  waveConfigs:
+  - {fileID: 11400000, guid: 10cb450e0c9a343b5ad5fab83b05b273, type: 2}
+  - {fileID: 11400000, guid: aa703970125454c56b1743350788f93d, type: 2}
   timeBetweenWaves: 1
   isLooping: 0
 --- !u!4 &1713164239
@@ -672,6 +674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1936628021391398819, guid: e0f06582bf5e2451f9f212fc3f14ae41, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4256713187721104516, guid: e0f06582bf5e2451f9f212fc3f14ae41, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -715,6 +721,10 @@ PrefabInstance:
     - target: {fileID: 4641461180620302587, guid: e0f06582bf5e2451f9f212fc3f14ae41, type: 3}
       propertyPath: m_Name
       value: mage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641461180620302587, guid: e0f06582bf5e2451f9f212fc3f14ae41, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
