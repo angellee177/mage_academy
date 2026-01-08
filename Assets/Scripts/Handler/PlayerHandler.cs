@@ -10,7 +10,10 @@ public class PlayerHandler : MonoBehaviour
     [SerializeField] float upBoundPadding;
     [SerializeField] float downBoundPadding;
 
+    Shooter playerShooter;
     InputAction moveAction;
+    InputAction fireAction;
+
     Vector3 moveVector;
     Vector2 minBounds;
     Vector2 maxBounds;
@@ -18,7 +21,10 @@ public class PlayerHandler : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerShooter = GetComponentInChildren<Shooter>();
         moveAction = InputSystem.actions.FindAction("Move");
+        fireAction = InputSystem.actions.FindAction("Attack");
+
         InitBound();
     }
 
@@ -33,6 +39,7 @@ public class PlayerHandler : MonoBehaviour
     void Update()
     {
         MovePlayer();
+        FireShooter();
     }
 
     void MovePlayer()
@@ -45,5 +52,10 @@ public class PlayerHandler : MonoBehaviour
 
         // ensuring the move speed the same regardless of the frame rate
         transform.position = newPos;
+    }
+
+    void FireShooter()
+    {
+        playerShooter.isFiring = fireAction.IsPressed();
     }
 }
