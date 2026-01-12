@@ -125,6 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c828078e473649cda4e48eb4b9c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthHandler
+  isPlayer: 0
+  scoreValue: 1
   health: 25
   hitParticles: {fileID: 809475289883502579, guid: a903253dbc0f34291be93aca20562d10, type: 3}
   applyCameraShake: 0
@@ -140,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebe3bd418d1d547f7a619ed0e47edc08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageHandler
-  damage: 1
+  damage: 10
 --- !u!1 &2257043308647775975
 GameObject:
   m_ObjectHideFlags: 0

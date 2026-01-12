@@ -56,6 +56,7 @@
     <Compile Include="Assets/Scripts/Handler/DamageHandler.cs" />
     <Compile Include="Assets/Scripts/Object/WaveConfigSO.cs" />
     <Compile Include="Assets/Scripts/Handler/PathFinding.cs" />
+    <Compile Include="Assets/Scripts/Handler/LevelManagerHandler.cs" />
     <Compile Include="Assets/Scripts/Handler/Shooter.cs" />
     <Compile Include="Assets/Scripts/Handler/AudioManager.cs" />
     <Compile Include="Assets/Scripts/Handler/ScoreManagerHandler.cs" />

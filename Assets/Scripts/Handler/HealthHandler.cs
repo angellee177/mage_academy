@@ -12,12 +12,14 @@ public class HealthHandler : MonoBehaviour
     ShakeScreen cameraShake;
     AudioManager audioManager;
     ScoreManagerHandler scoreManager;
+    LevelManagerHandler levelManager;
 
     void Start()
     {
         cameraShake = Camera.main.GetComponent<ShakeScreen>();
         audioManager = FindFirstObjectByType<AudioManager>();
         scoreManager = FindFirstObjectByType<ScoreManagerHandler>();
+        levelManager = FindFirstObjectByType<LevelManagerHandler>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -52,11 +54,14 @@ public class HealthHandler : MonoBehaviour
 
     void Die()
     {
-        if(!isPlayer)
+        if(isPlayer)
         {
+            print("player die! move to gameOver");
+            levelManager.LoadGameOver();
+        } else {
             scoreManager.ModifyScore(scoreValue);
         }
-        
+
         Destroy(gameObject);
     }
 
@@ -67,5 +72,10 @@ public class HealthHandler : MonoBehaviour
             ParticleSystem particles = Instantiate(hitParticles, transform.position, Quaternion.identity);
             Destroy(particles, particles.main.duration + particles.main.startLifetime.constantMax);
         }
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 }
