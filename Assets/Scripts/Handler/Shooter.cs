@@ -1,6 +1,6 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem; // You need this for the new Input System!
 
 public class Shooter : MonoBehaviour
 {
@@ -29,6 +29,22 @@ public class Shooter : MonoBehaviour
         }
     }
 
+    // --- NEW INPUT LOGIC ---
+    // This is the function that handles the touch signal
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        // When finger touches down
+        if (context.started || context.performed)
+        {
+            isFiring = true;
+        }
+        // When finger lifts up
+        else if (context.canceled)
+        {
+            isFiring = false;
+        }
+    }
+
     void Update()
     {
         Fire();
@@ -38,9 +54,9 @@ public class Shooter : MonoBehaviour
     {
         if(isFiring && fireCoroutine == null)
         {
-            // Repeatedly fire projectiles
             fireCoroutine = StartCoroutine(FireContinuously());
-        } else if(!isFiring && fireCoroutine != null)
+        } 
+        else if(!isFiring && fireCoroutine != null)
         {
             StopCoroutine(fireCoroutine);
             fireCoroutine = null;
@@ -51,16 +67,18 @@ public class Shooter : MonoBehaviour
     {
         while(true)
         {
+            // Simplified instantiation
             GameObject projectile = Instantiate(
                 projectilePrefab, 
                 transform.position,
-                Quaternion.identity
+                transform.rotation
             );
 
-            projectile.transform.rotation = transform.rotation;
-
             Rigidbody2D projectileRB = projectile.GetComponent<Rigidbody2D>();
-            projectileRB.linearVelocity = transform.up * projectileSpeed;
+            if(projectileRB != null)
+            {
+                projectileRB.linearVelocity = transform.up * projectileSpeed;
+            }
 
             Destroy(projectile, projectileLifetime);
 
@@ -70,7 +88,7 @@ public class Shooter : MonoBehaviour
             );
             waitTime = Mathf.Clamp(waitTime, minimumFireRate, maximumFireRate);
 
-            audioManager.PlayShootingSFX();
+            if(audioManager != null) audioManager.PlayShootingSFX();
 
             yield return new WaitForSeconds(waitTime);
         }
