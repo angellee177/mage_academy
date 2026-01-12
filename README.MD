@@ -1,4 +1,4 @@
-# Mage Academt Game
+# Mage Academy Game
 
 <img src="docs/img/Mage academy.gif" width="240" height="400" alt="Mage Academy Gameplay">
 
@@ -6,7 +6,7 @@
 Help!! Emily is surrounded!
 Trapped in the swirling mists of the Magic Tower, apprentice mage Emily is being swarmed by pesky bats! Use your magical reflexes to blast through the enemies and guide her to safety. Can you master the mystic spirals and save the academy?
 
---
+----
 ## Project Setup
 
 Before you start, ensure you have the following installed:
